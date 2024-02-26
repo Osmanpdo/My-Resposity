@@ -1,16 +1,13 @@
-all: main
+all: func_menus.o func_tela.o
+	gcc main.c func_menus.o func_tela.o -o main
 
-CC = clang
-override CFLAGS += -g -Wno-everything -pthread -lm
 
-SRCS = $(shell find . -name '.ccls-cache' -type d -prune -o -type f -name '*.c' -print)
-HEADERS = $(shell find . -name '.ccls-cache' -type d -prune -o -type f -name '*.h' -print)
+func_menus: func_menus.c
+	gcc -c func_menus.c
 
-main: $(SRCS) $(HEADERS)
-	$(CC) $(CFLAGS) $(SRCS) -o "$@"
-
-main-debug: $(SRCS) $(HEADERS)
-	$(CC) $(CFLAGS) -O0 $(SRCS) -o "$@"
+func_tela: func_tela.c
+	gcc -c func_tela.c
 
 clean:
-	rm -f main main-debug
+	rm -rf *.o
+	rm -f main

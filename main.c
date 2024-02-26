@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "funcs_menus.h"
+#include "func_menus.h"
 #include "func_tela.h"
 
 /*OBS: O system("clear || cls"), ele pode limpar a tela tanto do windows como do linux */

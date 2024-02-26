@@ -1,5 +1,5 @@
-#ifndef FUNCS_MENUS_H_ENCLUDED
-#define FUNCS_MENUS_H_ENCLUDED
+#ifndef FUNC_MENUS_H_ENCLUDED
+#define FUNC_MENUS_H_ENCLUDED
 
 int Calculadora_Simples();
 int Comversor_de_Medida();

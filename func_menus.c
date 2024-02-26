@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <unistd.h>
-#include "funcs_menus.h"
+#include "func_menus.h"
 #include "func_tela.h"
 
 int Calculadora_Simples(void){
