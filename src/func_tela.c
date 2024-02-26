@@ -3,7 +3,7 @@
 #define True 1
 
 //Esta função serve para pegar apenas números interios de acordo com meus parâmetros
-int Dados_Validos(int inicio, int fim){
+int entradaDadosValidos(int inicio, int fim) {
 	int retorno = -1, num;
     char carac;
 	while (True){
@@ -47,20 +47,20 @@ float Dados_Validos_Real(void){
 
 //Telas do software
 
-void Menu_Principal(void){
+void telaMenuPrincipal(void){
 	int i;
 	char menu[149] = "=-=-=-=-=-=-=-=-=-=-=--=-=-=-=\nSeja bem-vindo(a) ao menu!\n[1]Jogos\n[2]Cálculos\n[3]Sair do programa\n=-=-=-=-=-=-=-=-=-=-=--=-=-=-=\nDigite aqui: ";
 	for (i = 0; i < 149; i++) printf("%c", menu[i]);	
 }
 
-void Menu_Calculos(void){
+void menuCalculos(void){
     int i;
     char menu[261] = "=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=\nSeja bem-vindo(a) ao menu de cálculos\nEscolha uma das opções abaixo:\n\n[1]Calculadora simples\n[2]Conversor de medida simples\n[3]Calcular a área\n[4]Voltar ao menu\n=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=\nDigite aqui: ";
     
     for (i = 0; i < 261; i ++) printf("%c", menu[i]);    
 }
 
-void Menu_Jogos(void){
+void menuJogos(void){
     int i;
     char menu[193] = "=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=\nSeja bem-vindo(a) ao menu de jogos\n[1]Pedra, papel ou tesoura\n[2]Jogo de adivinha\n[3]Voltar ao menu\n=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=\nDigite aqui: ";
     

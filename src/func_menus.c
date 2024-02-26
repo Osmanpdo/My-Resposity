@@ -5,7 +5,7 @@
 #include "func_menus.h"
 #include "func_tela.h"
 
-int Calculadora_Simples(void){
+int calculadoraSimples(void){
 	float n1, n2, resultado;
 	int num;
 	while (True){
@@ -53,7 +53,7 @@ int Calculadora_Simples(void){
 }	
 
 
-int Comversor_de_Medida(void){
+int conversorMedidas(void){
     //O (float) transforma os números em reais
     int num, conv[1][3] = {1,10,100}; //armazenamento das constantes
     float n1, n2;
@@ -140,7 +140,7 @@ int Comversor_de_Medida(void){
 }
 
 
-int Pedra_Papel_Tesoura(void){  
+int pedraPapelTesoura(void){  
     int jogador,ia,cont;
     cont = 0;
     system("clear || cls");
@@ -210,7 +210,7 @@ int Pedra_Papel_Tesoura(void){
     return cont;
 }
 
-int Jogo_Adivinha(void){
+int jogoAdivinha(void){
     
     int player,n,nmin,nmax,rep,cont;
     cont = 0;
@@ -271,7 +271,7 @@ int Jogo_Adivinha(void){
      return cont;
 }
 
-int Area_Figuras_Planas(void){
+int areaFigurasPlanas(void){
 	float area, base, altura, lado;
 	int num;
 	
