@@ -1,13 +1,21 @@
 all: func_menus.o func_tela.o
-	gcc main.c func_menus.o func_tela.o -o main
+	
+	mv func_menus.o bin
+	mv func_tela.o bin
 
+	gcc main.c bin/func_menus.o bin/func_tela.o -o main
+	mv main bin
+	
+func_menus.o: src/func_menus.c
+	gcc -c src/func_menus.c
 
-func_menus: func_menus.c
-	gcc -c func_menus.c
-
-func_tela: func_tela.c
-	gcc -c func_tela.c
+func_tela.o: src/func_tela.c
+	gcc -c src/func_tela.c
 
 clean:
-	rm -rf *.o
-	rm -f main
+	rm -rf bin/*.o
+	rm -r bin/main
+
+run:
+	bin/./main
+
