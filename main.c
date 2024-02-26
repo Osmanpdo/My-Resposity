@@ -2,86 +2,58 @@
 #include "src/func_menus.h"
 #include "src/func_tela.h"
 
-/*OBS: O system("clear || cls"), ele pode limpar a tela tanto do windows como do linux */
 
 int main(){
     
-	int num;
+	int numeroCondicao;
 	
 	//Menu principal
 	while (True){
 		Menu_Principal();
-		num = Dados_Validos(1, 3);
-        if (num == 3) num = 4; //para os outros menus não interfirir
-		switch (num){
-            //Menu de jogos
-			case 1:
-				while (True){
+		numeroCondicao = Dados_Validos(1, 3);
+
+        if (numeroCondicao == 1) {
+            while (True){
     				system("clear || cls");
     				Menu_Jogos();
-    				num = Dados_Validos(1, 3);
+    				numeroCondicao = Dados_Validos(1, 3);
     				
-    				switch (num){
-    					case 1:
-    						num = Pedra_Papel_Tesoura();
-                            
-    					    break;		
-    					case 2:
-    						num = Jogo_Adivinha();
-                            
-    						break;
-    					case 3:	
-    						break;
-    				}
-        			system("clear || cls");	
-        			if (num == 3) break; //Voltar ao menu principal	
+                    if (numeroCondicao == 1) {
+                        numeroCondicao = Pedra_Papel_Tesoura();
+                    } else if (numeroCondicao == 2) {
+                        numeroCondicao = Jogo_Adivinha();
+                    } else {
+                        numeroCondicao = 0;
+                        system("clear || cls");	
+                        break;
+                    }
 				}
-				break;
-            //Menu de cálculos
-			case 2:
-			    while (True){
+        } else if (numeroCondicao == 2) {
+            while (True){
 			        system("clear || cls");
     			    Menu_Calculos();
-                    num = Dados_Validos(1, 4);
-
-                    //Calculadora simples
-                    switch(num){
-                       case 1:
-                        num = Calculadora_Simples();
+                    numeroCondicao = Dados_Validos(1, 4);
+                    
+                    if (numeroCondicao == 1) {
+                        numeroCondicao = Calculadora_Simples();
                         continue; // Voltar ao menu de cálculos
+                    } else if (numeroCondicao == 2) {
+                        numeroCondicao = Comversor_de_Medida();
+                        continue; //Voltar ao menu de cálculo
+                    } else if (numeroCondicao == 3) {
+                        numeroCondicao = Area_Figuras_Planas();
+                        continue;
+                    } else {
+                        numeroCondicao = 0;
+                        system("clear || cls");
                         break;
-                           
-                        //Conversor de medida 
-                       case 2:
-                           num = Comversor_de_Medida();
-                           continue; //Voltar ao menu de cálculos
-                           break;
-                        //Calcular área de algumas figuas
-                       case 3:
-                           num = Area_Figuras_Planas();
-                           continue;
-                           
-                           break;
-                       case 4:
-                           break;       
                     }
-                    system("clear || cls");
-                    if (num == 4){
-                        num = 0;
-                    }
-                    break;    
+                        
                 }
-			    break;
-            
-            //Sair do Switch
-			case 4:
-			    system("clear || cls");
-				printf("Obrigado por usar nosso programa!");
-				
-				break;
-				
-		}
-	if (num == 4) break; //Parar o menu principal		
-	}
-	
+        } else {
+            system("clear || cls");
+			printf("Obrigado por usar nosso programa!\n");	
+			break;
+        }		
+	}	
 }
