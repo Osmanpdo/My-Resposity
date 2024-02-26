@@ -11,7 +11,7 @@ int calculadoraSimples(void){
 	while (True){
        system("clear || cls");
        Menu_Caculadora();
-       num = Dados_Validos(1,5);
+       num = entradaDadosValidos(1,5);
        system("clear || cls");
        
        if (num == 5) break; //Sair da calculadora 
@@ -19,9 +19,9 @@ int calculadoraSimples(void){
        (num == 1) ? printf("[Soma]\n") : (num == 2) ? printf("[Subtração]\n") : (num == 3) ? printf("[Multiplicação]\n") : printf("[Divisão]\n");
         
        printf("Digite o primeiro número: ");
-       n1 = Dados_Validos_Real();
+       n1 = entradaDadosValidosReal();
        printf("Digite outro número: ");
-       n2 = Dados_Validos_Real();
+       n2 = entradaDadosValidosReal();
         
        switch(num){
            case 1:
@@ -45,7 +45,7 @@ int calculadoraSimples(void){
                break;
      }
      printf("\n\nDeseja fazer outra operação?\n[1]Sim\n[2]Não\nDigite aqui: ");
-     num = Dados_Validos(1,2);
+     num = entradaDadosValidos(1,2);
      if (num == 1) continue; //permanece na calculadora 
      else break;  //volta para o menu de cálculos
     }
@@ -60,25 +60,25 @@ int conversorMedidas(void){
     while (True){
         system("clear || cls");
         Menu_Conversor_P1();
-        num = Dados_Validos(1, 3);
+        num = entradaDadosValidos(1, 3);
         Menu_Conversor_P2();
         switch(num){
             case 1:
-                num = Dados_Validos(1, 3);
+                num = entradaDadosValidos(1, 3);
                 printf("Informe a quantidade: ");
                 switch(num){
                     case 1:
-                        n1 = Dados_Validos_Real();
+                        n1 = entradaDadosValidosReal();
                         printf("%.2fM = %.2fM",n1, n1);
                         break;
                     case 2:
-                        n1 = Dados_Validos_Real();
+                        n1 = entradaDadosValidosReal();
                         printf("%.2fM ", n1);
                         n1 = n1 * (float)conv[0][1];
                         printf("= %.2fDM", n1);
                         break;
                     case 3:
-                        n1 = Dados_Validos_Real();
+                        n1 = entradaDadosValidosReal();
                         printf("%.2fM ", n1);
                         n1 = n1 * (float)conv[0][2] ;
                         printf("= %.2fCM", n1);
@@ -86,21 +86,21 @@ int conversorMedidas(void){
                 }
                 break;
             case 2:
-                num = Dados_Validos(1, 3);
+                num = entradaDadosValidos(1, 3);
                 printf("Informe a quantidade: ");
                 switch(num){
                    case 1:
-                        n1 = Dados_Validos_Real();
+                        n1 = entradaDadosValidosReal();
                         printf("%.2fDM ", n1);
                         n1 = n1 / (float)conv[0][1] ;
                         printf("= %.2fM", n1);
                         break;
                    case 2:
-                        n1 = Dados_Validos_Real();
+                        n1 = entradaDadosValidosReal();
                         printf("%.2fDM = %.2fDM", n1, n1);
                         break;
                    case 3:
-                        n1 = Dados_Validos_Real();
+                        n1 = entradaDadosValidosReal();
                         printf("%.2fDM ", n1);
                         n1 = n1 * (float)conv[0][1] ;
                         printf("= %.2fCM", n1);
@@ -108,23 +108,23 @@ int conversorMedidas(void){
                  }	        
                 break;
             case 3:
-                num = Dados_Validos(1, 3);
+                num = entradaDadosValidos(1, 3);
                 printf("Informe a quantidade: ");
                 switch(num){
                    case 1:
-                        n1 = Dados_Validos_Real();
+                        n1 = entradaDadosValidosReal();
                         printf("%.2fCM ", n1);
                         n1 = n1 / (float)conv[0][2] ;
                         printf("= %.2fM", n1);
                         break;
                    case 2:
-                        n1 = Dados_Validos_Real();
+                        n1 = entradaDadosValidosReal();
                         printf("%.2fCM ", n1);
                         n1 = n1 / (float)conv[0][1] ;
                         printf("= %.2fDM", n1);
                         break;
                    case 3:
-                        n1 = Dados_Validos_Real();
+                        n1 = entradaDadosValidosReal();
                         printf("%.2fCM = %.2fCM", n1, n1);
                         break;
                 break;
@@ -132,7 +132,7 @@ int conversorMedidas(void){
          }
         system("clear || cls");
         printf("\nDeseja fazer outra conversão?\n[1]Sim\n[2]Não\nDigite aqui: ");
-        num = Dados_Validos(1, 2);
+        num = entradaDadosValidos(1, 2);
         if (num == 1) continue; //Volar ao menu de conversor
         else break; //Sair do menu de conversor 
     }   
@@ -151,7 +151,7 @@ int pedraPapelTesoura(void){
     while (cont < 2){
 
         printf("Escolha uma das opções:\n[1]pedra\n[2]papel\n[3]tesoura\nDigite aqui: ");
-        jogador = Dados_Validos(1,3);
+        jogador = entradaDadosValidos(1,3);
         system("clear || cls");
         printf("A IA está pensando...\n");
         
@@ -203,7 +203,7 @@ int pedraPapelTesoura(void){
     
         printf("\nDeseja jogar novamente?\n");
         printf("[1]Sim\n[2]Não\nDigite aqui: ");
-        cont = Dados_Validos(1,2);
+        cont = entradaDadosValidos(1,2);
         system("clear || cls");
     }
 
@@ -235,7 +235,7 @@ int jogoAdivinha(void){
         while(rep != 0){
             printf("Você tem %d tentativas \n", rep);
             printf("Digite um número entre 1 e 10\nDigite aqui: ");
-            player = Dados_Validos(1,10);
+            player = entradaDadosValidos(1,10);
 
             if (player == n){
                 system("clear || cls");
@@ -265,7 +265,7 @@ int jogoAdivinha(void){
         }
         printf("Deseja jogar novamente?\n");
         printf("[1]sim\n[2]não\nDigite aqui: ");
-        cont = Dados_Validos(1,2);
+        cont = entradaDadosValidos(1,2);
         system("clear || cls");
     }
      return cont;
@@ -278,19 +278,19 @@ int areaFigurasPlanas(void){
 	while (True){
 	    system("clear || cls");    
         printf("[1]Triângulo\n[2]Quadrado\n[3]Retângulo\n[4]Voltar ao menu de cálculo\nDigite aqui: ");
-	    num = Dados_Validos(1,4);
+	    num = entradaDadosValidos(1,4);
 	    switch(num){
 	        case 1:
 	            system("clear || cls");
 	            printf("Informe a altura do triângulo: ");
-        	    altura = Dados_Validos_Real();
+        	    altura = entradaDadosValidosReal();
 	            printf("Informe a base do triângulo: ");
-	            base = Dados_Validos_Real();
+	            base = entradaDadosValidosReal();
 	            area = (base*altura)/2;
 	            printf("A área do triângulo é %.2f\n", area);
 	            
 	            printf("Deseja fazer outra operação?\n[1]Sim\n[2]Não\nDigite aqui: ");
-	            num = Dados_Validos(1,2);
+	            num = entradaDadosValidos(1,2);
 	            if (num == 1) break;
 	            
 	             
@@ -298,11 +298,11 @@ int areaFigurasPlanas(void){
 	        case 2:
 	            system("clear || cls");
 	            printf("Informe o lado do quadrado: ");
-	            lado = Dados_Validos_Real();
+	            lado = entradaDadosValidosReal();
 	            area = lado*lado;
 	            printf("A área do quadrado é %.2f\n", area);
 	            printf("Deseja fazer outra operação?\n[1]Sim\n[2]Não\nDigite aqui: ");
-	            num = Dados_Validos(1,2);
+	            num = entradaDadosValidos(1,2);
 	            if (num == 1) break;
 	            
 	            
@@ -310,13 +310,13 @@ int areaFigurasPlanas(void){
 	        case 3:
 	            system("clear || cls");
 	            printf("Informe a altura do retângulo: ");
-	            altura = Dados_Validos_Real();
+	            altura = entradaDadosValidosReal();
 	            printf("Informe a base do retângulo: ");
-	            base = Dados_Validos_Real();
+	            base = entradaDadosValidosReal();
 	            area = base*altura;
 	            printf("A área do retângulo é %.2f\n", area);	            
 	            printf("Deseja fazer outra operação?\n[1]Sim\n[2]Não\nDigite aqui: ");
-	            num = Dados_Validos(1,2);
+	            num = entradaDadosValidos(1,2);
 	            if (num == 1) break;
 	             
 	            break;

@@ -28,7 +28,7 @@ int entradaDadosValidos(int inicio, int fim) {
 }
 
 //Mesma coisa só muda que não tem parâmetros e serve apenas para números reais 
-float Dados_Validos_Real(void){
+float entradaDadosValidosReal(void){
     int retorno = -1;
     float num;
     char pala;
