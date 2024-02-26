@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "src/func_menus.h"
-#include "src/func_tela.h"
+#include "./src/func_tela.h"
 
 
 int main(){

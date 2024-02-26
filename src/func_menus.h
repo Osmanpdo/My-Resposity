@@ -1,10 +1,10 @@
 #ifndef FUNC_MENUS_H_ENCLUDED
 #define FUNC_MENUS_H_ENCLUDED
 
-int Calculadora_Simples();
-int Comversor_de_Medida();
-int Pedra_Papel_Tesoura();
-int Jogo_Adivinha();
-int Area_Figuras_Planas();
+int calculadoraSimples();
+int conversorMedidas();
+int pedraPapelTesoura();
+int jogoAdivinha();
+int areaFigurasPlanas();
 
 #endif

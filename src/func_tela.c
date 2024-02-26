@@ -67,21 +67,21 @@ void menuJogos(void){
     for (i = 0; i < 193; i++) printf("%c", menu[i]);    
 }
 
-void Menu_Caculadora(void){
+void menuCaculadora(void){
     int i;
     char menu[256] = "=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=\nSeja bem-vindo(a) a calculadora simples!\nEscolha uma das operações abaixo:\n[1]Somar\n[2]Subtrair\n[3]Multiplicar\n[4]Dividir\n[5]Voltar ao menu de cálculos\n=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=\nDigite aqui: ";
     
     for (i = 0; i < 256; i ++) printf("%c", menu[i]);    
 }
 
-void Menu_Conversor_P1(void){
+void menuConversorMedida1(void){
     int i;
     char menu[222] = "=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=\nSeja bem-vindo(a) a conversor de medida\nsimples!\nEscolha uma das opções abaixo:\n[1]Metros\n[2]Decímetros\n[3]Centímetros\n=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=\nDigite aqui: ";
     
     for (i = 0; i < 222; i ++) printf("%c", menu[i]);    
 }
 
-void Menu_Conversor_P2(void){
+void menuConversorMedida2(void){
     int i;
     char menu[66] = "Para...\n[1]metros\n[2]decímetros\n[3]centímetros\ndigite aqui: ";
     

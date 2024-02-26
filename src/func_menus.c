@@ -10,7 +10,7 @@ int calculadoraSimples(void){
 	int num;
 	while (True){
        system("clear || cls");
-       Menu_Caculadora();
+       menuCaculadora();
        num = entradaDadosValidos(1,5);
        system("clear || cls");
        
@@ -59,9 +59,9 @@ int conversorMedidas(void){
     float n1, n2;
     while (True){
         system("clear || cls");
-        Menu_Conversor_P1();
+        menuConversorMedida1();
         num = entradaDadosValidos(1, 3);
-        Menu_Conversor_P2();
+        menuConversorMedida2();
         switch(num){
             case 1:
                 num = entradaDadosValidos(1, 3);
