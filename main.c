@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "src/func_menus.h"
 #include "./src/func_tela.h"
 
