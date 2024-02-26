@@ -1,5 +1,5 @@
 all: func_menus.o func_tela.o
-	
+	mkdir bin
 	mv func_menus.o bin
 	mv func_tela.o bin
 
@@ -13,9 +13,9 @@ func_tela.o: src/func_tela.c
 	gcc -c src/func_tela.c
 
 clean:
-	rm -rf bin/*.o
-	rm -r bin/main
+	rm -rf bin
 
-run:
+run:	
 	bin/./main
+	rm -rf bin
 
