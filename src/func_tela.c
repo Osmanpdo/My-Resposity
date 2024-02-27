@@ -51,6 +51,7 @@ float entradaDadosValidosReal(void){
             
             }while(palavra != '\n');
     } while(retorno == 0);
+    return numeroRealCorreto;
 }
 
 

@@ -5,11 +5,11 @@
 #include "func_menus.h"
 #include "func_tela.h"
 
-int calculadoraSimples(void){
+int calculadoraSimples(void) {
 	float primeiroNumero, segundoNumero, resultado;
     int numeroParaCalculadora;
 	int numeroCondicao;
-	while (True){
+	while (True) {
             
         limparTela();
         menuCaculadora();
