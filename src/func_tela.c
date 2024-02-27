@@ -13,43 +13,43 @@ void limparTela() {
 
 //Esta função serve para pegar apenas números interios de acordo com meus parâmetros
 int entradaDadosValidos(int inicio, int fim) {
-	int retorno = -1, num;
-    char carac;
+	int retorno = -1, numeroInteiroCorreto;
+    char caracter;
 	while (True){
     	
     	do{
             //O retorno vai receber 1 ou 0, caso seja verdadeiro ou falso respectivamente
-    		retorno = scanf("%d", &num); 
+    		retorno = scanf("%d", &numeroInteiroCorreto); 
             if (retorno == 0) printf("Digite um opção válida: ");
             
     		do{
-    			carac = getchar(); //Se o usuário digitar algum caracter a função getchar vai limpar todo tudo o que estiver no buffer de teclado
+    			caracter = getchar(); //Se o usuário digitar algum caracter a função getchar vai limpar todo tudo o que estiver no buffer de teclado
     			
-    			}while(carac != '\n'); //No final da string sempre terá como último caracter o enter
+    			}while(caracter != '\n'); //No final da string sempre terá como último caracter o enter
     		} while(retorno == 0);
-       if (num < inicio || num > fim){
+       if (numeroInteiroCorreto < inicio || numeroInteiroCorreto > fim){
            //Caso não obedeça os paramentos
            printf("Digite um opção válida: ");
            continue; //Caso não obedeça os paramentos
        }else break; //Caso obedeça os parâmetros retorna o num 
 	}
-	return num;
+	return numeroInteiroCorreto;
 }
 
 //Mesma coisa só muda que não tem parâmetros e serve apenas para números reais 
 float entradaDadosValidosReal(void){
     int retorno = -1;
-    float num;
-    char pala;
+    float numeroRealCorreto;
+    char palavra;
     do{
-        retorno = scanf("%f", &num);
+        retorno = scanf("%f", &numeroRealCorreto);
         if (retorno == 0) printf("Digite corretamente: ");
         else continue;                
         do{
             
-            pala = getchar();
+            palavra = getchar();
             
-            }while(pala != '\n');
+            }while(palavra != '\n');
     } while(retorno == 0);
 }
 

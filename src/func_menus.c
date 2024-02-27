@@ -6,137 +6,137 @@
 #include "func_tela.h"
 
 int calculadoraSimples(void){
-	float n1, n2, resultado;
-	int num;
+	float primeiroNumero, segundoNumero, resultado;
+	int numeroCondicao;
 	while (True){
        limparTela();
        menuCaculadora();
-       num = entradaDadosValidos(1,5);
+       numeroCondicao = entradaDadosValidos(1,5);
        limparTela();
        
-       if (num == 5) break; //Sair da calculadora 
+       if (numeroCondicao == 5) break; //Sair da calculadora 
        //Colocar na tela a operação que esta sendo feita 
-       (num == 1) ? printf("[Soma]\n") : (num == 2) ? printf("[Subtração]\n") : (num == 3) ? printf("[Multiplicação]\n") : printf("[Divisão]\n");
+       (numeroCondicao == 1) ? printf("[Soma]\n") : (numeroCondicao == 2) ? printf("[Subtração]\n") : (numeroCondicao == 3) ? printf("[Multiplicação]\n") : printf("[Divisão]\n");
         
        printf("Digite o primeiro número: ");
-       n1 = entradaDadosValidosReal();
+       primeiroNumero = entradaDadosValidosReal();
        printf("Digite outro número: ");
-       n2 = entradaDadosValidosReal();
+       segundoNumero = entradaDadosValidosReal();
         
-       switch(num){
+       switch(numeroCondicao){
            case 1:
-               resultado = n1 + n2;
-               printf("%.2f + %.2f = %.2f", n1, n2, resultado);
+               resultado = primeiroNumero + segundoNumero;
+               printf("%.2f + %.2f = %.2f", primeiroNumero, segundoNumero, resultado);
                break;
            case 2:
-               resultado = n1 - n2;
-               printf("%.2f - %.2f = %.2f", n1, n2, resultado);
+               resultado = primeiroNumero - segundoNumero;
+               printf("%.2f - %.2f = %.2f", primeiroNumero, segundoNumero, resultado);
                break;
            case 3:
-               resultado = n1 * n2; 
-               printf("%.2f * %.2f = %.2f", n1, n2, resultado);
+               resultado = primeiroNumero * segundoNumero; 
+               printf("%.2f * %.2f = %.2f", primeiroNumero, segundoNumero, resultado);
                break;
            case 4:
-               if (n2 == 0) printf("Essa divisão é indeterminado");
+               if (segundoNumero == 0) printf("Essa divisão é indeterminado");
                else {
-                   resultado = n1 / n2;
-                   printf("%.2f / %.2f = %.2f", n1, n2, resultado);
+                   resultado = primeiroNumero / segundoNumero;
+                   printf("%.2f / %.2f = %.2f", primeiroNumero, segundoNumero, resultado);
                }
                break;
      }
      printf("\n\nDeseja fazer outra operação?\n[1]Sim\n[2]Não\nDigite aqui: ");
-     num = entradaDadosValidos(1,2);
-     if (num == 1) continue; //permanece na calculadora 
+     numeroCondicao = entradaDadosValidos(1,2);
+     if (numeroCondicao == 1) continue; //permanece na calculadora 
      else break;  //volta para o menu de cálculos
     }
-    return num;
+    return numeroCondicao;
 }	
 
 
 int conversorMedidas(void){
     //O (float) transforma os números em reais
-    int num, conv[1][3] = {1,10,100}; //armazenamento das constantes
-    float n1, n2;
+    int numeroCondicao, conv[1][3] = {1,10,100}; //armazenamento das constantes
+    float primeiroNumero, segundoNumero;
     while (True){
         limparTela();
         menuConversorMedida1();
-        num = entradaDadosValidos(1, 3);
+        numeroCondicao = entradaDadosValidos(1, 3);
         menuConversorMedida2();
-        switch(num){
+        switch(numeroCondicao){
             case 1:
-                num = entradaDadosValidos(1, 3);
+                numeroCondicao = entradaDadosValidos(1, 3);
                 printf("Informe a quantidade: ");
-                switch(num){
+                switch(numeroCondicao){
                     case 1:
-                        n1 = entradaDadosValidosReal();
-                        printf("%.2fM = %.2fM",n1, n1);
+                        primeiroNumero = entradaDadosValidosReal();
+                        printf("%.2fM = %.2fM",primeiroNumero, primeiroNumero);
                         break;
                     case 2:
-                        n1 = entradaDadosValidosReal();
-                        printf("%.2fM ", n1);
-                        n1 = n1 * (float)conv[0][1];
-                        printf("= %.2fDM", n1);
+                        primeiroNumero = entradaDadosValidosReal();
+                        printf("%.2fM ", primeiroNumero);
+                        primeiroNumero = primeiroNumero * (float)conv[0][1];
+                        printf("= %.2fDM", primeiroNumero);
                         break;
                     case 3:
-                        n1 = entradaDadosValidosReal();
-                        printf("%.2fM ", n1);
-                        n1 = n1 * (float)conv[0][2] ;
-                        printf("= %.2fCM", n1);
+                        primeiroNumero = entradaDadosValidosReal();
+                        printf("%.2fM ", primeiroNumero);
+                        primeiroNumero = primeiroNumero * (float)conv[0][2] ;
+                        printf("= %.2fCM", primeiroNumero);
                         break;
                 }
                 break;
             case 2:
-                num = entradaDadosValidos(1, 3);
+                numeroCondicao = entradaDadosValidos(1, 3);
                 printf("Informe a quantidade: ");
-                switch(num){
+                switch(numeroCondicao){
                    case 1:
-                        n1 = entradaDadosValidosReal();
-                        printf("%.2fDM ", n1);
-                        n1 = n1 / (float)conv[0][1] ;
-                        printf("= %.2fM", n1);
+                        primeiroNumero = entradaDadosValidosReal();
+                        printf("%.2fDM ", primeiroNumero);
+                        primeiroNumero = primeiroNumero / (float)conv[0][1] ;
+                        printf("= %.2fM", primeiroNumero);
                         break;
                    case 2:
-                        n1 = entradaDadosValidosReal();
-                        printf("%.2fDM = %.2fDM", n1, n1);
+                        primeiroNumero = entradaDadosValidosReal();
+                        printf("%.2fDM = %.2fDM", primeiroNumero, primeiroNumero);
                         break;
                    case 3:
-                        n1 = entradaDadosValidosReal();
-                        printf("%.2fDM ", n1);
-                        n1 = n1 * (float)conv[0][1] ;
-                        printf("= %.2fCM", n1);
+                        primeiroNumero = entradaDadosValidosReal();
+                        printf("%.2fDM ", primeiroNumero);
+                        primeiroNumero = primeiroNumero * (float)conv[0][1] ;
+                        printf("= %.2fCM", primeiroNumero);
                         break;
                  }	        
                 break;
             case 3:
-                num = entradaDadosValidos(1, 3);
+                numeroCondicao = entradaDadosValidos(1, 3);
                 printf("Informe a quantidade: ");
-                switch(num){
+                switch(numeroCondicao){
                    case 1:
-                        n1 = entradaDadosValidosReal();
-                        printf("%.2fCM ", n1);
-                        n1 = n1 / (float)conv[0][2] ;
-                        printf("= %.2fM", n1);
+                        primeiroNumero = entradaDadosValidosReal();
+                        printf("%.2fCM ", primeiroNumero);
+                        primeiroNumero = primeiroNumero / (float)conv[0][2] ;
+                        printf("= %.2fM", primeiroNumero);
                         break;
                    case 2:
-                        n1 = entradaDadosValidosReal();
-                        printf("%.2fCM ", n1);
-                        n1 = n1 / (float)conv[0][1] ;
-                        printf("= %.2fDM", n1);
+                        primeiroNumero = entradaDadosValidosReal();
+                        printf("%.2fCM ", primeiroNumero);
+                        primeiroNumero = primeiroNumero / (float)conv[0][1] ;
+                        printf("= %.2fDM", primeiroNumero);
                         break;
                    case 3:
-                        n1 = entradaDadosValidosReal();
-                        printf("%.2fCM = %.2fCM", n1, n1);
+                        primeiroNumero = entradaDadosValidosReal();
+                        printf("%.2fCM = %.2fCM", primeiroNumero, primeiroNumero);
                         break;
                 break;
                }
          }
         limparTela();
         printf("\nDeseja fazer outra conversão?\n[1]Sim\n[2]Não\nDigite aqui: ");
-        num = entradaDadosValidos(1, 2);
-        if (num == 1) continue; //Volar ao menu de conversor
+        numeroCondicao = entradaDadosValidos(1, 2);
+        if (numeroCondicao == 1) continue; //Volar ao menu de conversor
         else break; //Sair do menu de conversor 
     }   
-    return num;
+    return numeroCondicao;
 }
 
 
@@ -273,13 +273,13 @@ int jogoAdivinha(void){
 
 int areaFigurasPlanas(void){
 	float area, base, altura, lado;
-	int num;
+	int numeroCondicao;
 	
 	while (True){
 	    limparTela();    
         printf("[1]Triângulo\n[2]Quadrado\n[3]Retângulo\n[4]Voltar ao menu de cálculo\nDigite aqui: ");
-	    num = entradaDadosValidos(1,4);
-	    switch(num){
+	    numeroCondicao = entradaDadosValidos(1,4);
+	    switch(numeroCondicao){
 	        case 1:
 	            limparTela();
 	            printf("Informe a altura do triângulo: ");
@@ -290,8 +290,8 @@ int areaFigurasPlanas(void){
 	            printf("A área do triângulo é %.2f\n", area);
 	            
 	            printf("Deseja fazer outra operação?\n[1]Sim\n[2]Não\nDigite aqui: ");
-	            num = entradaDadosValidos(1,2);
-	            if (num == 1) break;
+	            numeroCondicao = entradaDadosValidos(1,2);
+	            if (numeroCondicao == 1) break;
 	            
 	             
 	            break;
@@ -302,8 +302,8 @@ int areaFigurasPlanas(void){
 	            area = lado*lado;
 	            printf("A área do quadrado é %.2f\n", area);
 	            printf("Deseja fazer outra operação?\n[1]Sim\n[2]Não\nDigite aqui: ");
-	            num = entradaDadosValidos(1,2);
-	            if (num == 1) break;
+	            numeroCondicao = entradaDadosValidos(1,2);
+	            if (numeroCondicao == 1) break;
 	            
 	            
 	            break;
@@ -316,15 +316,15 @@ int areaFigurasPlanas(void){
 	            area = base*altura;
 	            printf("A área do retângulo é %.2f\n", area);	            
 	            printf("Deseja fazer outra operação?\n[1]Sim\n[2]Não\nDigite aqui: ");
-	            num = entradaDadosValidos(1,2);
-	            if (num == 1) break;
+	            numeroCondicao = entradaDadosValidos(1,2);
+	            if (numeroCondicao == 1) break;
 	             
 	            break;
 	        case 4:
 	            break;
 	    }
-    	if (num == 4) break;
+    	if (numeroCondicao == 4) break;
         
 	}
-    return num;
+    return numeroCondicao;
 }
