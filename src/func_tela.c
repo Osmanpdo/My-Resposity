@@ -1,6 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "func_tela.h"
 #define True 1
+
+void limparTela() {
+    #if defined(_WIN32) || defined(_WIN64)
+        system("cls");
+    #else defined(_linux_) || defined(_unix_)
+        system("clear");
+    #endif
+}
 
 //Esta função serve para pegar apenas números interios de acordo com meus parâmetros
 int entradaDadosValidos(int inicio, int fim) {

@@ -17,5 +17,4 @@ clean:
 
 run:	
 	bin/./main
-	rm -rf bin
 

@@ -9,10 +9,10 @@ int calculadoraSimples(void){
 	float n1, n2, resultado;
 	int num;
 	while (True){
-       system("clear || cls");
+       limparTela();
        menuCaculadora();
        num = entradaDadosValidos(1,5);
-       system("clear || cls");
+       limparTela();
        
        if (num == 5) break; //Sair da calculadora 
        //Colocar na tela a operação que esta sendo feita 
@@ -58,7 +58,7 @@ int conversorMedidas(void){
     int num, conv[1][3] = {1,10,100}; //armazenamento das constantes
     float n1, n2;
     while (True){
-        system("clear || cls");
+        limparTela();
         menuConversorMedida1();
         num = entradaDadosValidos(1, 3);
         menuConversorMedida2();
@@ -130,7 +130,7 @@ int conversorMedidas(void){
                 break;
                }
          }
-        system("clear || cls");
+        limparTela();
         printf("\nDeseja fazer outra conversão?\n[1]Sim\n[2]Não\nDigite aqui: ");
         num = entradaDadosValidos(1, 2);
         if (num == 1) continue; //Volar ao menu de conversor
@@ -143,16 +143,16 @@ int conversorMedidas(void){
 int pedraPapelTesoura(void){  
     int jogador,ia,cont;
     cont = 0;
-    system("clear || cls");
+    limparTela();
     printf("Bem-vindo ao pedra, papel e tesoura\n");
 
     sleep(2);
-    system("clear || cls");
+    limparTela();
     while (cont < 2){
 
         printf("Escolha uma das opções:\n[1]pedra\n[2]papel\n[3]tesoura\nDigite aqui: ");
         jogador = entradaDadosValidos(1,3);
-        system("clear || cls");
+        limparTela();
         printf("A IA está pensando...\n");
         
         sleep(2);
@@ -204,7 +204,7 @@ int pedraPapelTesoura(void){
         printf("\nDeseja jogar novamente?\n");
         printf("[1]Sim\n[2]Não\nDigite aqui: ");
         cont = entradaDadosValidos(1,2);
-        system("clear || cls");
+        limparTela();
     }
 
     return cont;
@@ -214,11 +214,11 @@ int jogoAdivinha(void){
     
     int player,n,nmin,nmax,rep,cont;
     cont = 0;
-    system("clear || cls");
+    limparTela();
     printf("Bem-vindo(a) ao adivinha, você tem 5 chances\n");
 
     sleep(2);
-    system("clear || cls");
+    limparTela();
 
 
     while (cont < 2){
@@ -238,35 +238,35 @@ int jogoAdivinha(void){
             player = entradaDadosValidos(1,10);
 
             if (player == n){
-                system("clear || cls");
+                limparTela();
                 printf("Você acertou!\n");
                 break;
             }
         
             else if (n < player && player <= nmax){
-                system("clear || cls");
+                limparTela();
                 printf("Você chegou perto!\n");
                 rep -= 1; 
             }
             else if (n > player && nmin <= player){
-                system("clear || cls");
+                limparTela();
                 printf("Você chegou perto!\n");
                 rep -= 1;    
             }
             else{
-                system("clear || cls");
+                limparTela();
                 printf("Você está longe\n");
                 rep -= 1; 
             } 
         }
         if (rep == 0){
-            system("clear || cls");
+            limparTela();
             printf("Você perdeu :(\n");
         }
         printf("Deseja jogar novamente?\n");
         printf("[1]sim\n[2]não\nDigite aqui: ");
         cont = entradaDadosValidos(1,2);
-        system("clear || cls");
+        limparTela();
     }
      return cont;
 }
@@ -276,12 +276,12 @@ int areaFigurasPlanas(void){
 	int num;
 	
 	while (True){
-	    system("clear || cls");    
+	    limparTela();    
         printf("[1]Triângulo\n[2]Quadrado\n[3]Retângulo\n[4]Voltar ao menu de cálculo\nDigite aqui: ");
 	    num = entradaDadosValidos(1,4);
 	    switch(num){
 	        case 1:
-	            system("clear || cls");
+	            limparTela();
 	            printf("Informe a altura do triângulo: ");
         	    altura = entradaDadosValidosReal();
 	            printf("Informe a base do triângulo: ");
@@ -296,7 +296,7 @@ int areaFigurasPlanas(void){
 	             
 	            break;
 	        case 2:
-	            system("clear || cls");
+	            limparTela();
 	            printf("Informe o lado do quadrado: ");
 	            lado = entradaDadosValidosReal();
 	            area = lado*lado;
@@ -308,7 +308,7 @@ int areaFigurasPlanas(void){
 	            
 	            break;
 	        case 3:
-	            system("clear || cls");
+	            limparTela();
 	            printf("Informe a altura do retângulo: ");
 	            altura = entradaDadosValidosReal();
 	            printf("Informe a base do retângulo: ");

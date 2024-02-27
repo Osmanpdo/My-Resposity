@@ -3,6 +3,7 @@
 
 int entradaDadosValidos();
 float entradaDadosValidosReal();
+void limparTela();
 #define True 1
 
 //Telas do software

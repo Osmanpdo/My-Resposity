@@ -14,7 +14,7 @@ int main(){
 
         if (numeroCondicao == 1) {
             while (True){
-    				system("clear || cls");
+    				limparTela();
     				menuJogos();
     				numeroCondicao = entradaDadosValidos(1, 3);
     				
@@ -24,13 +24,13 @@ int main(){
                         numeroCondicao = jogoAdivinha();
                     } else {
                         numeroCondicao = 0;
-                        system("clear || cls");	
+                        limparTela();	
                         break;
                     }
 				}
         } else if (numeroCondicao == 2) {
             while (True){
-			        system("clear || cls");
+			        limparTela();
     			    menuCalculos();
                     numeroCondicao = entradaDadosValidos(1, 4);
                     
@@ -45,13 +45,13 @@ int main(){
                         continue;
                     } else {
                         numeroCondicao = 0;
-                        system("clear || cls");
+                        limparTela();
                         break;
                     }
                         
                 }
         } else {
-            system("clear || cls");
+            limparTela();
 			printf("Obrigado por usar nosso programa!\n");	
 			break;
         }		
