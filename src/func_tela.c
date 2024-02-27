@@ -55,10 +55,10 @@ float entradaDadosValidosReal(void){
 
 
 //Telas do software
-
 void telaMenuPrincipal(void){
 	printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=\n");
-    printf("bem-vindo(a) ao menu!\n");
+    printf("Seja bem-vindo(a) ao menu!\n");
+    printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=\n");
     printf("[1]Jogos\n");
     printf("[2]Cálculos\n");
     printf("[3]Sair do programa\n");
@@ -69,6 +69,7 @@ void telaMenuPrincipal(void){
 void menuCalculos(void){
     printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=\n");
     printf("Seja bem-vindo(a) ao menu de cálculos\n");
+    printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=\n");
     printf("Escolha uma das opções abaixo:\n");
     printf("[1]Calculadora simples\n");
     printf("[2]Conversor de medida simples\n");
@@ -81,6 +82,7 @@ void menuCalculos(void){
 void menuJogos(void){
     printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=\n");
     printf("Seja bem-vindo(a) ao menu de jogos\n");
+    printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=\n");
     printf("[1]Pedra, papel ou tesoura\n");
     printf("[2]Jogo de adivinha\n");
     printf("[3]Voltar ao menu\n");
@@ -91,6 +93,7 @@ void menuJogos(void){
 void menuCaculadora(void){
     printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=\n");
     printf("Seja bem-vindo(a) a calculadora simples!\n");
+    printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=\n");
     printf("Escolha uma das operações abaixo:\n");
     printf("[1]Somar\n");
     printf("[2]Subtrair\n");
@@ -103,19 +106,21 @@ void menuCaculadora(void){
 }
 
 void menuConversorMedida1(void){
-    printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=\n");
+    printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=\n");
     printf("Seja bem-vindo(a) a conversor de medida simples!\n");
+    printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=\n");
     printf("Escolha uma das opções abaixo:\n");
     printf("[1]Metros\n");
     printf("[2]Decímetros\n");
     printf("[3]Centímetros\n");
-    printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=\n");
+    printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=\n");
     printf("Digite aqui: ");
 }
 
 void menuConversorMedida2(void){
     printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=\n");
     printf("Para...\n");
+    printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=\n");
     printf("[1]metros\n");
     printf("[2]decímetros\n");
     printf("[3]centímetros\n");

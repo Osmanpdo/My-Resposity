@@ -7,47 +7,78 @@
 
 int calculadoraSimples(void){
 	float primeiroNumero, segundoNumero, resultado;
+    int numeroParaCalculadora;
 	int numeroCondicao;
 	while (True){
-       limparTela();
-       menuCaculadora();
-       numeroCondicao = entradaDadosValidos(1,5);
-       limparTela();
-       
-       if (numeroCondicao == 5) break; //Sair da calculadora 
-       //Colocar na tela a operação que esta sendo feita 
-       (numeroCondicao == 1) ? printf("[Soma]\n") : (numeroCondicao == 2) ? printf("[Subtração]\n") : (numeroCondicao == 3) ? printf("[Multiplicação]\n") : printf("[Divisão]\n");
+            
+        limparTela();
+        menuCaculadora();
+        numeroCondicao = entradaDadosValidos(1,5);
+        limparTela();
+        numeroParaCalculadora = numeroCondicao;
         
-       printf("Digite o primeiro número: ");
-       primeiroNumero = entradaDadosValidosReal();
-       printf("Digite outro número: ");
-       segundoNumero = entradaDadosValidosReal();
+        // Sai da calculadora 
+        if (numeroCondicao == 5) {
+            break;
+        }
+
+        while (True) {
+
+            limparTela();
+            // Colocar na tela a operação que esta sendo feita
+            if (numeroParaCalculadora == 1) {
+                printf("[Soma]\n");
+            } else if (numeroParaCalculadora == 2) {
+                printf("[Subtração]\n");
+            } else if (numeroParaCalculadora == 3) {
+                printf("[Multiplicação]\n");
+            } else {
+                printf("[Divisão]\n");
+            }
         
-       switch(numeroCondicao){
-           case 1:
-               resultado = primeiroNumero + segundoNumero;
-               printf("%.2f + %.2f = %.2f", primeiroNumero, segundoNumero, resultado);
-               break;
-           case 2:
-               resultado = primeiroNumero - segundoNumero;
-               printf("%.2f - %.2f = %.2f", primeiroNumero, segundoNumero, resultado);
-               break;
-           case 3:
-               resultado = primeiroNumero * segundoNumero; 
-               printf("%.2f * %.2f = %.2f", primeiroNumero, segundoNumero, resultado);
-               break;
-           case 4:
-               if (segundoNumero == 0) printf("Essa divisão é indeterminado");
-               else {
-                   resultado = primeiroNumero / segundoNumero;
-                   printf("%.2f / %.2f = %.2f", primeiroNumero, segundoNumero, resultado);
-               }
-               break;
-     }
-     printf("\n\nDeseja fazer outra operação?\n[1]Sim\n[2]Não\nDigite aqui: ");
-     numeroCondicao = entradaDadosValidos(1,2);
-     if (numeroCondicao == 1) continue; //permanece na calculadora 
-     else break;  //volta para o menu de cálculos
+            printf("Digite o primeiro número: ");
+            primeiroNumero = entradaDadosValidosReal();
+            printf("Digite outro número: ");
+            segundoNumero = entradaDadosValidosReal();
+
+
+            if (numeroParaCalculadora == 1) {
+                resultado = primeiroNumero + segundoNumero;
+                printf("%.2f + %.2f = %.2f", primeiroNumero, segundoNumero, resultado);
+            } else if (numeroParaCalculadora == 2) {
+                resultado = primeiroNumero - segundoNumero;
+                printf("%.2f - %.2f = %.2f", primeiroNumero, segundoNumero, resultado);
+            } else if (numeroParaCalculadora == 3) {
+                resultado = primeiroNumero * segundoNumero; 
+                printf("%.2f * %.2f = %.2f", primeiroNumero, segundoNumero, resultado);
+            } else {
+                if (segundoNumero == 0) {
+                    printf("Essa divisão é indeterminada!");
+                } else {
+                    resultado = primeiroNumero / segundoNumero;
+                    printf("%.2f / %.2f = %.2f", primeiroNumero, segundoNumero, resultado);
+                }
+            }
+            printf("\n\n");
+            printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=\n");
+            printf("Deseja fazer outra operação?\n");
+            printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=\n");
+            printf("[1]Sim\n");
+            printf("[2]Não\n");
+            printf("=-=-=-=-=-=-=-=-=-=-=--=-=-=-=\n");
+            printf("Digite aqui: ");
+
+            numeroCondicao = entradaDadosValidos(1,2);
+            
+            if (numeroCondicao == 1) {
+                //permanece na calculadora
+                continue;
+            
+            } else {
+                //volta para o menu de cálculos
+                break;
+            }
+        }
     }
     return numeroCondicao;
 }	
